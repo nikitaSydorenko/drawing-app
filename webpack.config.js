@@ -5,15 +5,12 @@ const { HotModuleReplacementPlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-
   entry: path.resolve(__dirname, 'src/index.js'),
-
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/',
   },
-
   mode: 'development',
   module: {
     rules: [
