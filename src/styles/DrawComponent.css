@@ -1,0 +1,16 @@
+input[type=range] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.container {
+    width: 20%;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
