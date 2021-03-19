@@ -3,7 +3,7 @@ import './styles.css';
 import DrawComponent from './components/DrawComponent';
 
 const App = () => (
-  <div>
+  <div className="App">
     <DrawComponent />
   </div>
 );
