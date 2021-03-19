@@ -3,16 +3,21 @@ import Sketch from 'react-p5';
 import '../styles/DrawComponent.css';
 
 const DrawComponent = () => {
-  let hex;
   const [weightStroke, setWeightStroke] = useState(2);
   const [color, setColor] = useState('#00ff00');
   const setup = useCallback((p5) => {
     p5.createCanvas(1830, 900);
+
+    const button = p5.createButton('reset sketch');
+    button.style('color', 'red');
+    button.position(10, 70);
+    button.mousePressed(() => {
+      p5.clear();
+    });
   }, []);
 
   const onChangeColor = useCallback((event) => {
-    hex = event.target.value;
-    setColor(hex);
+    setColor(event.target.value);
   }, []);
 
   const draw = useCallback((p5) => {
@@ -29,6 +34,7 @@ const DrawComponent = () => {
 
   return (
     <div className="container">
+
       <input type="range" onChange={onChangeRange} value={weightStroke} />
       <span>Pick Weight</span>
       <h2>{weightStroke}</h2>
